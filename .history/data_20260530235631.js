@@ -7,7 +7,7 @@ const publications = [
     links: [
       { text: "Paper", url: "paper/PhysRevB%20112%2C%20045114.pdf" }
     ],
-    abstract: 'A Dirac quantum spin liquid hosts Dirac spinons, which are low-energy fractionalized neutral quasiparticles with spin 1/2 that obey the Dirac equation. Recent inelastic neutron scattering studies have revealed a cone spin continuum in \\(\\mathrm{YCu}_3(\\mathrm{OD})_6\\mathrm{Br}_2[\\mathrm{Br}_x(\\mathrm{OD})_{1-x}]\\), consistent with the convolution of two Dirac spinons. In this work, we further studied spin excitations using the inelastic neutron scattering technique. The width of low-energy spin excitations shows a linear temperature dependence, which can be explained by spinon-spinon interactions with a Dirac dispersion. Polarized neutron scattering measurements reveal that in-plane magnetic fluctuations are about 1.5 times stronger than the out-of-plane ones, suggesting the presence of Dzyaloshinskii-Moriya interaction and consistent with our theoretical modeling and simulations. Moreover, the high-energy spin excitations around 14 meV agree with the one-pair spinon-antispinon excitations in Raman studies. The real part of the dynamical susceptibility derived from the Kramers-Kronig relationship also agrees with the Knight shift measured by nuclear magnetic resonance, clearly demonstrating the negligible effects of magnetic impurities on static susceptibility. These results provide a rare example in studying quantum-spin-liquid materials where different experimental techniques can be directly compared, and they give further insights for the possible Dirac quantum spin liquid in this system.',
+    abstract: '',
     citation: '',
     isNew: false,
     isPreprint: false,
@@ -18,7 +18,7 @@ const publications = [
     authors: "Chuang Chen, Yuan Da Liao, <b>Chengkang Zhou</b>, Gaopei Pan, Zi Yang Meng, Yang Qi",
     venue: '<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.110.L121112" target="_blank" rel="noopener">Phys. Rev. B 110, L121112 (2024)</a>',
     links: [
-      { text: "Paper", url: "paper/PhysRevB.110.L121112.pdf" }
+      { text: "Paper", url: "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.110.L121112" }
     ],
     abstract: '',
     citation: '',
@@ -31,7 +31,7 @@ const publications = [
     authors: "Zeliang Sun, Gaihua Ye, <b>Chengkang Zhou</b>, Mengqi Huang, Nan Huang, Xilong Xu, Qiuyang Li, Guoxin Zheng, Zhipeng Ye, Cynthia Nnokwe, Lu Li, Hui Deng, Li Yang, David Mandrus, Zi Yang Meng, Kai Sun, Chunhui Rita Du, Rui He, Liuyan Zhao",
     venue: '<a href="https://www.nature.com/articles/s41567-024-02618-6" target="_blank" rel="noopener">Nat. Phys. 20, 1764-1771 (2024)</a>',
     links: [
-      { text: "Paper", url: "paper/Nature%20Physics%20volume%2020,%20pages%201764%E2%80%931771%20(2024).pdf" },
+      { text: "Paper", url: "https://www.nature.com/articles/s41567-024-02618-6" },
       { text: "News", url: "https://hku.hk/press/news_detail_27648.html" }
     ],
     abstract: '',
@@ -45,7 +45,7 @@ const publications = [
     authors: "Zhenyuan Zeng, <b>Chengkang Zhou</b>, Honglin Zhou, Lankun Han, Runze Chi, Kuo Li, Maiko Kofu, Kenji Nakajima, Yuan Wei, Wenliang Zhang, D. G. Mazzone, Zi Yang Meng, Shiliang Li",
     venue: '<a href="https://doi.org/10.1038/s41567-024-02495-z" target="_blank" rel="noopener">Nat. Phys. 20, 1097-1102 (2024)</a>',
     links: [
-      { text: "Paper", url: "paper/Nature%20Physics%20volume%2020,%20pages%201097%E2%80%931102%20(2024)%20.pdf" },
+      { text: "Paper", url: "https://doi.org/10.1038/s41567-024-02495-z" },
       { text: "News", url: "https://www.hku.hk/press/press-releases/detail/27305.html" }
     ],
     abstract: '',
@@ -85,7 +85,7 @@ const publications = [
     authors: "<b>Chengkang Zhou</b>, Meng-Yuan Li, Zheng Yan, Peng Ye, Zi Yang Meng",
     venue: '<a href="https://doi.org/10.1103/PhysRevB.106.214428" target="_blank" rel="noopener">Phys. Rev. B 106, 214428 (2022)</a>',
     links: [
-      { text: "Paper", url: "paper/PhysRevB.106.214428.pdf" }
+      { text: "Paper", url: "https://doi.org/10.1103/PhysRevB.106.214428" }
     ],
     abstract: '',
     citation: '',
@@ -98,7 +98,7 @@ const publications = [
     authors: "<b>Chengkang Zhou</b>, Zheng Yan, Han-Qing Wu, Kai Sun, Oleg A. Starykh, Zi Yang Meng",
     venue: '<a href="https://doi.org/10.1103/PhysRevLett.126.227201" target="_blank" rel="noopener">Phys. Rev. Lett. 126, 227201 (2021)</a>',
     links: [
-      { text: "Paper", url: "paper/PhysRevLett.126.227201.pdf" }
+      { text: "Paper", url: "https://doi.org/10.1103/PhysRevLett.126.227201" }
     ],
     abstract: '',
     citation: '',
@@ -111,7 +111,7 @@ const publications = [
     authors: "<b>Chengkang Zhou</b>, Yuanwei Feng, Jiawei Ruan, Dao-Xin Yao",
     venue: '<a href="https://doi.org/10.1103/PhysRevE.98.012127" target="_blank" rel="noopener">Phys. Rev. E 98, 012127 (2018)</a>',
     links: [
-      { text: "Paper", url: "paper/PhysRevE.98.012127.pdf" }
+      { text: "Paper", url: "https://doi.org/10.1103/PhysRevE.98.012127" }
     ],
     abstract: '',
     citation: '',
@@ -124,7 +124,7 @@ const publications = [
     authors: "Zhengbang Zhou, <b>Chengkang Zhou</b>, Menghan Song, Yong Baek Kim, Zi Yang Meng",
     venue: '<a href="https://arxiv.org/abs/2603.19951" target="_blank" rel="noopener">arXiv:2603.19951 (2026)</a>',
     links: [
-      { text: "Preprint", url: "paper/2603.19951v1.pdf" }
+      { text: "Preprint", url: "https://arxiv.org/abs/2603.19951" }
     ],
     abstract: '',
     citation: '',
@@ -137,7 +137,7 @@ const publications = [
     authors: "<b>Chengkang Zhou</b>, Zhengbang Zhou, Felix Desrochers, Yong Baek Kim, Zi Yang Meng",
     venue: '<a href="https://arxiv.org/abs/2510.14813" target="_blank" rel="noopener">arXiv:2510.14813 (2025)</a>',
     links: [
-      { text: "Preprint", url: "paper/2510.14813v1.pdf" }
+      { text: "Preprint", url: "https://arxiv.org/abs/2510.14813" }
     ],
     abstract: '',
     citation: 'Accepted by Nature Communications.',
@@ -150,7 +150,7 @@ const publications = [
     authors: "Shutao Liu, Yan Liu, <b>Chengkang Zhou</b>, Zhe Wang, Jie Lou, Changle Liu, Zheng Yan, Yan Chen",
     venue: '<a href="https://arxiv.org/abs/2512.11329" target="_blank" rel="noopener">arXiv:2512.11329 (2025)</a>',
     links: [
-      { text: "Preprint", url: "paper/2512.11329v1.pdf" }
+      { text: "Preprint", url: "https://arxiv.org/abs/2512.11329" }
     ],
     abstract: '',
     citation: '',

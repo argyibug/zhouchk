@@ -7,7 +7,7 @@ const publications = [
     links: [
       { text: "Paper", url: "paper/PhysRevB%20112%2C%20045114.pdf" }
     ],
-    abstract: 'A Dirac quantum spin liquid hosts Dirac spinons, which are low-energy fractionalized neutral quasiparticles with spin 1/2 that obey the Dirac equation. Recent inelastic neutron scattering studies have revealed a cone spin continuum in \\(\\mathrm{YCu}_3(\\mathrm{OD})_6\\mathrm{Br}_2[\\mathrm{Br}_x(\\mathrm{OD})_{1-x}]\\), consistent with the convolution of two Dirac spinons. In this work, we further studied spin excitations using the inelastic neutron scattering technique. The width of low-energy spin excitations shows a linear temperature dependence, which can be explained by spinon-spinon interactions with a Dirac dispersion. Polarized neutron scattering measurements reveal that in-plane magnetic fluctuations are about 1.5 times stronger than the out-of-plane ones, suggesting the presence of Dzyaloshinskii-Moriya interaction and consistent with our theoretical modeling and simulations. Moreover, the high-energy spin excitations around 14 meV agree with the one-pair spinon-antispinon excitations in Raman studies. The real part of the dynamical susceptibility derived from the Kramers-Kronig relationship also agrees with the Knight shift measured by nuclear magnetic resonance, clearly demonstrating the negligible effects of magnetic impurities on static susceptibility. These results provide a rare example in studying quantum-spin-liquid materials where different experimental techniques can be directly compared, and they give further insights for the possible Dirac quantum spin liquid in this system.',
+    abstract: '',
     citation: '',
     isNew: false,
     isPreprint: false,
