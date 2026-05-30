@@ -9,7 +9,7 @@
     { key: 'publications', href: 'publications.html', label: 'Publications' },
     { key: 'projects', href: 'projects.html', label: 'Projects' },
     { key: 'blogs', href: 'blogs.html', label: 'Academic Activity' },
-    { key: 'cv', href: 'files/ZCK_resume.pdf', label: 'CV' }
+    { key: 'cv', href: 'cv.html', label: 'CV' }
   ];
 
   const FOOTER_SOCIALS = [
