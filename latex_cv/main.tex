@@ -1,0 +1,289 @@
+%------------------------
+% ZCK's Résumé Template
+% Author: Chengkang Zhou
+% License: CC-BY-4.0
+%------------------------
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{ragged2e}
+\usepackage{etoolbox}
+\usepackage{tikz}
+\input{glyphtounicode}
+
+% font options
+\usepackage{newpxtext} %lmodern newpxtext
+\linespread{1.08}  % palladio needs more leading (space between lines)
+\usepackage[T1]{fontenc}
+
+\pagestyle{fancy}
+\fancyhf{}  % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\footskip}{5pt}
+
+% sections formatting
+\titleformat{\section}{
+  \vspace{-3pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+% ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% custom commands
+\newcommand{\cvitem}[1]{
+  \item\small{
+    {#1\vspace{-5pt}}
+  }
+}
+
+\newcommand{\cvheading}[4]{
+  \vspace{-5pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \small#3 & \small #4 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\cvpublish}[5]{
+  \vspace{-5pt}\item
+    \begin{tabularx}{\textwidth}[t]{@{}p{0.025\textwidth}@{\hspace{0.01\textwidth}}X@{}}
+      \textbf{#1.} & 
+      \begin{minipage}[t]{\hsize}
+        \textbf{#2} \\
+        #3 \\
+        \small #4
+        \ifx#5\empty\else
+          \\
+          \small #5
+        \fi
+      \end{minipage} \\
+    \end{tabularx}\vspace{-2.5pt}
+}
+
+\newcommand{\cvheadingstart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\cvheadingend}{\end{itemize}}
+\newcommand{\cvpublicstart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\cvpublicend}{\end{itemize}}
+\newcommand{\cvitemstart}{\begin{itemize}[label=\textopenbullet]\justifying}
+\newcommand{\cvitemend}{\end{itemize}\vspace{-3pt}}
+
+\newcommand{\cvskill}[2]{
+  \textcolor{black}{\textbf{#1}}\hfill
+  \foreach \x in {1,...,5}{%
+    \space{\ifnumgreater{\x}{#2}{\color{black!80!white!20}}{\color{black}}\faSquare}}\par%
+  \vspace{-2pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\footnotesize$\bullet$}}$}
+
+\begin{document}
+
+% contact information
+\begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+  \begin{tabular}[t]{l}
+    \textbf{\LARGE\scshape Chengkang Zhou} \\
+    \small Curriculum Vitae
+  \end{tabular} & 
+  \begin{tabular}[t]{l@{\quad}l}
+    \href{mailto:zhouchk2@hku.hk}{Email: zhouchk2@hku.hk} & Phone: +852 5229 7695 \\
+    \underline{\href{http://arxiv.org/a/zhou_c_2}{arXiv}} & \underline{\href{https://www.webofscience.com/wos/author/record/57883824}{Web of Science}}
+  \end{tabular}
+\end{tabular*}
+
+\section{\bfseries Academic Qualifications}
+\cvheadingstart
+  \vspace{-5pt}\item
+    \begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{\hspace{1em}}r@{}}
+      \textbf{The University of Hong Kong}, Hong Kong & Ph.D. in Physics & 2023 \\
+      \textbf{Sun Yat-sen University}, Mainland China & M.Sc. in Physics & 2019 \\
+      \textbf{Guangdong University of Technology}, Mainland China & B.Sc. in Physics & 2016 \\
+    \end{tabular*}\vspace{-7pt}
+\cvheadingend
+
+\section{\bfseries Academic Appointments}
+\cvheadingstart
+  \cvheading
+    {Postdoctoral Fellow}{The University of Hong Kong}
+    {} {Oct 2023 - Present}
+  % \cvheading
+  %   {Part-time Research Assistant}{The University of Hong Kong}
+  %   {} {Sep 2023 - Oct 2023}
+\cvheadingend
+
+\section{\bfseries Publications}
+\cvpublicstart
+    \cvpublish
+      {1}{Spin excitations arising from anisotropic Dirac spinons in YCu$_3$(OD)$_6$Br$_2$[Br$_{0.33}$(OD)$_{0.67}$]}
+      {Lankun Han, Zhenyuan Zeng, Min Long, Menghan Song, \textbf{Chengkang Zhou}, Bo Liu, Maiko Kofu, Kenji Nakajima, Paul Steffens, Arno Hiess, Zi Yang Meng, Yixi Su, Shiliang Li$^\#$}
+      {\href{https://doi.org/10.1103/PhysRevB.112.045114}{\textcolor{blue}{\underline{Phys. Rev. B 112, 045114 (2025)}}}}
+      {}
+    
+    \cvpublish
+      {2}{Universal collective Larmor-Silin mode emerging in magnetized correlated Dirac fermions}
+      {Chuang Chen, Yuan Da Liao, \textbf{Chengkang Zhou}, Gaopei Pan, Zi Yang Meng, Yang Qi$^\#$}
+      {\href{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.110.L121112}{\textcolor{blue}{\underline{Phys. Rev. B 110,L121112(2024)}}}}
+      {}
+
+    \cvpublish
+      {3}{Dimensionality crossover to a two-dimensional vestigial nematic state from a three-dimensional antiferromagnet in a honeycomb van der Waals magnet}
+      {Zeliang Sun$^*$, Gaihua Ye$^*$, \textbf{Chengkang Zhou$^*$}, Mengqi Huang, Nan Huang, Xilong Xu, Qiuyang Li, Guoxin Zheng, Zhipeng Ye, Cynthia Nnokwe, Lu Li, Hui Deng, Li Yang, David Mandrus, Zi Yang Meng, Kai Sun, Chunhui Rita Du, Rui He$^\#$, Liuyan Zhao$^\#$}
+      {
+        \href{https://www.nature.com/articles/s41567-024-02618-6}{\textcolor{blue}{\underline{Nat. Phys. 20, 1764$-$1771 (2024)}}}
+        }
+      {(\textbf{Journal Impact Factor: 19.3},\,\href{https://hku.hk/press/news_detail_27648.html}{\textcolor{red}{\textit{Corresponding News}}})}
+
+    \cvpublish
+      {4}{Spectral evidence for Dirac spinons in a kagome lattice antiferromagnet}
+      {Zhenyuan Zeng$^*$, \textbf{Chengkang Zhou$^*$}, Honglin Zhou$^*$, Lankun Han, Runze Chi, Kuo Li, Maiko Kofu, Kenji Nakajima$^\#$, Yuan Wei, Wenliang Zhang, D. G. Mazzone, Zi Yang Meng$^\#$, Shiliang Li$^\#$}
+      {
+        \href{https://doi.org/10.1038/s41567-024-02495-z}{\textcolor{blue}{\underline{Nat. Phys. 20, 1097$-$1102 (2024)}}}
+        }
+      {(\textbf{Journal Impact Factor: 19.3},\,\href{https://www.hku.hk/press/press-releases/detail/27305.html}{\textcolor{red}{\textit{Corresponding News}}})}
+
+    \cvpublish
+      {5}{Dynamical properties of quantum many-body systems with long range interactions}
+      {Menghan Song, Jiarui Zhao, \textbf{Chengkang Zhou}, Zi Yang Meng$^\#$}
+      {
+        \href{https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.5.033046}{\textcolor{blue}{\underline{Phys. Rev. Research 5.033046 (2023)}}}
+        }
+      {}
+
+    \cvpublish
+      {6}{Evolution of Dynamical Signature in the X-cube Fracton Topological Order}
+      {\textbf{Chengkang Zhou$^*$}, Meng-Yuan Li$^*$, Zheng Yan$^\#$, Peng Ye$^\#$, Zi Yang Meng}
+      {
+        \href{https://doi.org/10.1103/PhysRevResearch.4.033111}{\textcolor{blue}{\underline{Phys. Rev. Research 4.033111 (2022)}}}
+        }
+      {}
+
+    \cvpublish
+      {7}{Detecting Subsystem Symmetry Protected Topological Order Through Strange Correlators}
+      {\textbf{Chengkang Zhou$^*$}, Meng-Yuan Li$^*$, Zheng Yan, Peng Ye$^\#$, Zi Yang Meng$^\#$}
+      {
+        \href{https://doi.org/10.1103/PhysRevB.106.214428}{\textcolor{blue}{\underline{Phys. Rev. B. 106.214428(2022)}}}
+        }
+      {}
+
+    \cvpublish
+      {8}{Amplitude Mode in Quantum Magnets via Dimensional Crossover}
+      {\textbf{Chengkang Zhou}, Zheng Yan, Han-Qing Wu, Kai Sun, Oleg A. Starykh, Zi Yang Meng$^\#$}
+      {
+        \href{https://doi.org/10.1103/PhysRevLett.126.227201}{\textcolor{blue}{\underline{Phys. Rev. Lett. 126, 227201 (2021)}}}
+        }
+      {}
+
+    \cvpublish
+      {9}{XXZ-Ising model on the triangular kagome lattice with spin 1 on the decorated trimers,}
+      {\textbf{Chengkang Zhou}, Yuanwei Feng, Jiawei Ruan, and Dao-Xin Yao$^\#$}
+      {
+        \href{https://doi.org/10.1103/PhysRevE.98.012127}{\textcolor{blue}{\underline{Phys. Rev. E 98, 012127 (2018)}}}
+        }
+      {}
+\cvpublicend
+
+\section{\bfseries Manuscripts under Review}
+\cvpublicstart
+    \cvpublish
+      {1}{Quantum Fisher Information as a Probe of Critical Scaling in Frustrated Magnets: Signatures from Kagome Quantum Spin Liquid}
+      {Zhengbang Zhou$^*$, \textbf{Chengkang Zhou$^*$}, Menghan Song, Yong Baek Kim$^\#$, Zi Yang Meng$^\#$}
+      {\href{https://arxiv.org/abs/2603.19951}{\textcolor{blue}{\underline{arXiv:2603.19951 (2026)}}}}
+
+    \cvpublish
+      {2}{Quantum Fisher Information as a Thermal and Dynamical Probe in Frustrated Magnets: Insights from Quantum Spin Ice}
+      {\textbf{Chengkang Zhou$^*$}, Zhengbang Zhou$^*$, Félix Desrochers, Yong Baek Kim$^\#$, Zi Yang Meng$^\#$}
+      {\href{https://arxiv.org/abs/2510.14813}{\textcolor{blue}{\underline{arXiv:2510.14813 (2025)}}}}
+      {\textcolor{red}{Nat. Commun. (accepted)}}
+
+    \cvpublish
+      {3}{Spectroscopic evidences for the spontaneous symmetry breaking at the $SO(5)$ deconfined critical point of $J$-$Q_3$ model}
+      {Shutao Liu$^*$, Yan Liu$^*$, \textbf{Chengkang Zhou$^*$}, Zhe Wang, Jie Lou, Changle Liu$^\#$, Zheng Yan$^\#$, Yan Chen$^\#$}
+      {\href{https://arxiv.org/abs/2512.11329}{\textcolor{blue}{\underline{arXiv:2512.11329 (2025)}}}}
+      {}
+
+    % \cvpublish
+    %   {3}{Klein tunneling of Weyl magnons}
+    %   {\textbf{Chengkang Zhou}, Luyang Wang, Dao-Xin Yao$^\#$}
+    %   {
+    %     \href{https://arxiv.org/abs/1909.04109}{\textcolor{blue}{\underline{arXiv:1909.04109 (2019)}}}
+    %     }
+    %   {}
+
+\cvpublicend
+
+\section {\bfseries Teaching Experience}
+\cvheadingstart
+  \vspace{-5pt}\item
+    \begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{\hspace{1em}}r@{}}
+      \textbf{Teaching Assistant}, Physics problem-solving tutorials & & 2020--2023 \\
+    \end{tabular*}\vspace{-7pt}
+\cvheadingend
+
+\section {\bfseries Recent Talks}
+\cvheadingstart
+  \vspace{-5pt}\item
+    \begin{tabularx}{\textwidth}[t]{@{}X r@{}}
+      	{Quantum Fisher Information as a Thermal and Dynamical Probe in Frustrated spin system}\\
+      \small \href{https://automate2026.sciencesconf.org/}{\textcolor{blue}{\underline{automate2026}}}, Cergy-Pontoise, France & \small 2026.05.12 \\
+    \end{tabularx}\vspace{-7pt}
+\cvheadingend
+
+\section {\bfseries Research Interests}
+\begingroup
+\justifying
+\sloppy
+\setlength{\parindent}{0pt}
+My research centers on dynamical spectra in quantum magnetism, integrating \textbf{large-scale quantum Monte Carlo simulations}, \textbf{stochastic analytic continuation}, and quasiparticle approaches (including \textbf{linear spin wave} and Schwinger boson theories) to uncover collective excitations and phase-transition signatures in magnetic and topological quantum materials. Representative outcomes include identifying the amplitude (Higgs) mode via dimensional crossover [\href{https://doi.org/10.1103/PhysRevLett.126.227201}{\textcolor{blue}{\underline{Phys. Rev. Lett. 126, 227201 (2021)}}}], revealing dynamical signatures of fracton topological order [\href{https://doi.org/10.1103/PhysRevResearch.4.033111}{\textcolor{blue}{\underline{Phys. Rev. Research 4.033111 (2022)}}}], and collaborating with experimental teams to interpret spectroscopic observations in candidate quantum spin liquids [\href{https://doi.org/10.1038/s41567-024-02495-z}{\textcolor{blue}{\underline{Nat. Phys. 20, 1097$-$1102 (2024)}}}].
+
+\vspace{4pt}
+Looking ahead, my research plans are as follows:
+\cvheadingstart
+  \cvheading
+    {1. Extracting entanglement information from dynamical spectra}{}
+    {}{}
+  \vspace{-12pt}
+  \cvitemstart
+    \cvitem{\textbf{Quantum Fisher Information}: Recent developments at the interface of quantum many-body physics and quantum information science have introduced new concepts, such as \textbf{Quantum Fisher Information} (QFI). QFI is accessible through spectral functions, thereby bridging quantum entanglement and dynamical experimental observations. In my recent work [\href{https://arxiv.org/abs/2510.14813}{\textcolor{blue}{\underline{arXiv:2510.14813 (2025)}}} \& \href{https://arxiv.org/abs/2603.19951}{\textcolor{blue}{\underline{arXiv:2603.19951 (2026)}}}], I developed a framework to compute QFI from large-scale quantum Monte Carlo simulations and applied it to investigate the thermal and dynamical properties of frustrated spin systems. Our results demonstrate that QFI can effectively capture signatures of fractionalized excitations and phase transitions in frustrated magnets. In the future, I plan to further explore QFI applications in other quantum many-body systems, such as quantum spin liquids and topological materials, to uncover new insights into their entanglement properties and dynamical behaviors.}
+  \cvitemend
+  
+  \vspace{5pt}
+  
+  \cvheading
+    {2. Investigating the phase diagram and dynamical properties in the kagome lattice}{}
+    {}{}
+  \vspace{-12pt}
+  \cvitemstart
+    \cvitem{\textbf{Spectral properties in YCu$_3$(OD)$_6$Br$_2$[Br$_x$(OD)$_{(1-x)}$]}: Through collaboration with experimental teams, I have investigated spin spectral functions in the kagome-lattice antiferromagnet YCu$_3$(OD)$_6$Br$_2$[Br$_x$(OD)$_{(1-x)}$], establishing the prospect of realizing a Dirac quantum spin liquid in this material by demonstrating that the observed spectral features violate quasi-classical predictions [\href{https://doi.org/10.1038/s41567-024-02495-z}{\textcolor{blue}{\underline{Nat. Phys. 20, 1097$-$1102 (2024)}}}]. Motivated by these observations, I plan to further map out its phase diagram using Schwinger boson mean-field theory and other rapidly developing numerical methods, such as neural-network quantum states. The goal is to identify possible quantum spin liquid phases and their dynamical signatures in this kagome-lattice system.}
+  \cvitemend
+\cvheadingend
+
+\endgroup
+
+
+
+\end{document}

@@ -185,16 +185,7 @@ function populateProjects(showAllBadges) {
   const list = document.getElementById('projects-list');
   if (!list) return;
 
-  const selectedProjects = getSelectedProjects();
-  if (selectedProjects.length === 0) {
-    const section = list.closest('.homepage-section, .about-section');
-    if (section) {
-      section.hidden = true;
-    }
-    return;
-  }
-
-  selectedProjects.forEach(project => {
+  getSelectedProjects().forEach(project => {
     const li = document.createElement('li');
     const badges = showAllBadges
       ? project.badges
