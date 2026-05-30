@@ -61,7 +61,10 @@ const publications = [
     links: [
       { text: "Paper", url: "https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.5.033046" }
     ],
-    abstract: 'Employing large-scale quantum Monte Carlo simulations, we systematically compute the energy spectra of the two-dimensional (2D) spin-1/2 Heisenberg model with long-range interactions. With the \(1/r^{\alpha}\) ferromagnetic and staggered antiferromagnetic interactions, we find the explicit range in \(\alpha\) for the short-range Goldstone-type (gapless), anomalous Goldstone-type (gapless), and Higgs-type (gapped) spectra. Accompanied by the spin-wave analysis, our numerical results vividly reveal how the long-range interactions alter the usual linear and quadratic magnon dispersions in 2D quantum magnets and give rise to anomalous dynamical exponents. Moreover, we find the explicit case where the gapped excitation emerges at a noninteger decay exponent \(\alpha\) for the antiferromagnetic Hamiltonian. This work provides the first set of unbiased dynamical data of long-range quantum many-body systems and suggests that many universally accepted low-energy customs for short-range systems need to be substantially modified for long-range ones, which are of immediate relevance to the ongoing experimental efforts from quantum simulators to 2D quantum moire materials.',
+    abstract: 'Employing large-scale quantum Monte Carlo simulations, we systematically compute the energy spectra of the two-dimensional (2D) spin-1/2 Heisenberg model with long-range interactions. With the 1/𝑟𝛼
+ferromagnetic and staggered antiferromagnetic interactions, we find the explicit range in 𝛼
+for the short-range Goldstone-type (gapless), anomalous Goldstone-type (gapless), and Higgs-type (gapped) spectra. Accompanied by the spin-wave analysis, our numerical results vividly reveal how the long-range interactions alter the usual linear and quadratic magnon dispersions in 2D quantum magnets and give rise to anomalous dynamical exponents. Moreover, we find the explicit case where the gapped excitation emerges at a noninteger decay exponent 𝛼
+for the antiferromagnetic Hamiltonian. This work provides the first set of unbiased dynamical data of long-range quantum many-body systems and suggests that many universally accepted low-energy customs for short-range systems need to be substantially modified for long-range ones, which are of immediate relevance to the ongoing experimental efforts from quantum simulators to 2D quantum moiré materials.',
     // citation: '',
     isNew: false,
     isPreprint: false,
@@ -74,7 +77,7 @@ const publications = [
     links: [
       { text: "Paper", url: "https://doi.org/10.1103/PhysRevResearch.4.033111" }
     ],
-    abstract: 'As an unconventional realization of topological orders with an exotic interplay of topology and geometry, fracton (topological) orders feature subextensive topological ground-state degeneracy and subdimensional excitations that are movable only within a certain subspace. It has been known, in the exactly solvable three-dimensional X-cube model that universally represents the type-I fracton orders, that mobility constraints on subdimensional excitations originate from the absence of spatially deformable stringlike operators. To unveil the interplay of topology and geometry, in this paper, we study the dynamical signature in the X-cube model in the presence of external Zeeman fields via large-scale quantum Monte Carlo simulation and stochastic analytic continuation. We compute both real-space correlation functions and dynamic structure factors of subdimensional excitations (i.e., fractons, lineons, and planons) in the fracton phase and their evolution into the trivial paramagnetic phase by increasing external fields. We find, in the fracton phase, that the correlation functions and the spectral functions show clear anisotropy exactly caused by the underlying mobility constraints. On the other hand, the external fields successfully induce quantum fluctuations and offer mobility to excitations along the subspace allowed by mobility constraints. These numerical results provide the evolution of a dynamical signature of subdimensional particles in fracton orders, indicating that the mobility constraints on local dynamical properties of subdimensional excitations are deeply related to the existence of fracton topological order. The results will also be helpful in potential experimental identifications in spectroscopy measurements such as neutron scattering and nuclear magnetic resonance.',
+    abstract: '',
     // citation: '',
     isNew: false,
     isPreprint: false,
@@ -87,7 +90,7 @@ const publications = [
     links: [
       { text: "Paper", url: "paper/PhysRevB.106.214428.pdf" }
     ],
-    abstract: 'We employ strange correlators to detect 2D subsystem symmetry protected topological (SSPT) phases which are nontrivial topological phases protected by subsystem symmetries. Specifically, we analytically construct efficient strange correlators in the 2D cluster model in the presence of the uniform magnetic field and then perform the projector quantum Monte Carlo simulation within the quantum annealing scheme. We find that strange correlators show a long-range correlation in the SSPT phase, from which we define strange order parameters to characterize the topological phase transition between the SSPT phase at low fields and the trivial paramagnetic phase at high fields. Thus the detection of the fully localized zero modes on the 1D physical boundary of the SSPT phase has been transformed to the bulk correlation measurement about the local operators with the periodic boundary condition. We also find interesting spatial anisotropy of a strange correlator, which can be intrinsically traced back to the nature of spatial anisotropy of subsystem symmetries that protect SSPT order in the 2D cluster model. By simulating strange correlators, we, therefore, provide the first unbiased large-scale quantum Monte Carlo simulation on the easy and efficient detection in the SSPT phase and open the avenue of the investigation of the subtle yet fundamental nature of the novel interacting topological phases.',
+    abstract: '',
     // citation: '',
     isNew: false,
     isPreprint: false,
@@ -100,7 +103,7 @@ const publications = [
     links: [
       { text: "Paper", url: "paper/PhysRevLett.126.227201.pdf" }
     ],
-    abstract: 'We investigate the amplitude (Higgs) mode associated with longitudinal fluctuations of the order parameter at the continuous spontaneous symmetry breaking phase transition. In quantum magnets, due to the fast decay of the amplitude mode into low-energy Goldstone excitations, direct observation of this mode represents a challenging task. By focusing on a quasi-one-dimensional geometry, we circumvent the difficulty and investigate the amplitude mode in a system of weakly coupled spin chains with the help of quantum Monte Carlo simulations, stochastic analytic continuation, and a chain-mean field approach combined with a mapping to the field-theoretic sine-Gordon model. The amplitude mode is observed to emerge in the longitudinal spin susceptibility in the presence of a weak symmetry-breaking staggered field. A conventional measure of the amplitude mode in higher dimensions, the singlet bond mode, is found to appear at a lower than the amplitude mode frequency. We identify these two excitations with the second (first) breather of the sine-Gordon theory, correspondingly. In contrast to higher-dimensional systems, the amplitude and bond order fluctuations are found to carry significant spectral weight in the quasi-1D limit.',
+    abstract: '',
     // citation: '',
     isNew: false,
     isPreprint: false,
@@ -113,7 +116,7 @@ const publications = [
     links: [
       { text: "Paper", url: "paper/PhysRevE.98.012127.pdf" }
     ],
-    abstract: 'We consider the triangular kagome XXZ-Ising model (TKL XXZ-Ising model) formed by inserting small triangles ("a-trimers") with XXZ spin-1 inside the triangles of the kagome lattice ("b-trimers"). It is a mixed-spin system and can be solved exactly by transforming into the kagome lattice with the general transformation method for decorated spin systems. In the absence of an external field, we integrate out the quantum spins of the a-trimers and map the TKL model to the kagome Ising model exactly. We obtain the full phase diagram and their zero-temperature entropies (e.g., \(s_{\max}=5.48895\) per unit cell is given for the phase with the maximum entropy). When an external field is applied, 20 phases are found due to the quantum fluctuations of a-trimers. Moreover, the high spins in the a-trimers can lead to a stable quantized growth of the magnetization process in the Heisenberg limit.',
+    abstract: '',
     // citation: '',
     isNew: false,
     isPreprint: false,
@@ -126,7 +129,7 @@ const publications = [
     links: [
       { text: "Preprint", url: "paper/2603.19951v1.pdf" }
     ],
-    abstract: 'Quantum Fisher information (QFI) is a measure of multipartite quantum entanglement that can be obtained from inelastic neutron scattering data on quantum magnets. In this work, we demonstrate that the QFI can distinguish an unconventional quantum critical point (QCP) with fractionalization and emergent gauge structure from conventional ones within the Landau paradigm. We compute the QFI, via large-scale quantum Monte Carlo (QMC) simulations and exact diagonalization, in a kagome lattice quantum spin liquid (QSL) model with an XY and a cluster-Ising interactions. When the XY interaction is ferromagnetic, the QFI obtained by QMC reveals a large anomalous dimension, which is a fingerprint of the \((2+1)\mathrm{D}\ \mathrm{XY}^{*}\) universality class for the transition from the ferromagnetic phase to the \(\mathbb{Z}_2\) QSL. The investigation of thermal and dynamical properties of QFI is further extended to the case of antiferromagnetic XY interaction via exact diagonalization. In this regime, a transition to a possibly distinct QSL phase is suggested via both entanglement-based probes, such as QFI and genuine multipartite negativity, and analyses of the energy spectrum and structure factors. These results not only demonstrate the versatility of QFI in identifying QSL states and unconventional QCPs but also provide useful guidance for future theoretical and experimental studies of frustrated magnets.',
+    abstract: '',
     // citation: '',
     isNew: true,
     isPreprint: true,
@@ -139,7 +142,7 @@ const publications = [
     links: [
       { text: "Preprint", url: "paper/2510.14813v1.pdf" }
     ],
-    abstract: 'Quantum Fisher information (QFI) is a measure of multipartite entanglement accessible via inelastic neutron scattering. Here we demonstrate that QFI reveals thermal and dynamical properties of quantum spin ice (QSI), a three-dimensional quantum spin liquid with fractionalized excitations. By developing a multi-directed loop update quantum Monte Carlo algorithm, along with exact diagonalization and gauge mean-field theory, we compute the QFI for the pyrochlore lattice. The temperature and momentum dependence of QFI maps the phase diagram, distinguishing the ferromagnetic ordered phase, its critical region, the zero-flux QSI, and the \(\pi\)-flux QSI. QFI also captures two crossover scales: from trivial paramagnet to classical spin ice, then to QSI. We discuss the \(\pi\)-flux QSI in light of experiments on cerium-based pyrochlores. Our results suggest that QFI not only detects entanglement but also serves as a sensitive thermal and dynamical probe for frustrated quantum magnets.',
+    abstract: '',
     // citation: 'Accepted by Nature Communications.',
     isNew: true,
     isPreprint: true,
@@ -152,7 +155,7 @@ const publications = [
     links: [
       { text: "Preprint", url: "paper/2512.11329v1.pdf" }
     ],
-    abstract: 'Recent numerical and theoretical studies on the two-dimensional J-Q3 model suggest that the deconfined quantum critical point is actually a \(\mathrm{SO}(5)\)-symmetry-enhanced first-order phase transition that is spontaneously broken to \(\mathrm{O}(4)\). However, this conclusion has mainly relied on finite-size scaling of the entanglement entropy, lacking direct evidence from physical observables. Here, we investigate the dynamical spectra of spin and bond operators at the deconfined critical point of the J-Q3 model using large-scale quantum Monte Carlo simulations, and contrast them with the well-established \(\mathrm{O}(3)\) Wilson-Fisher criticality in the J1-J2 Heisenberg model. Although both models exhibit two gapless magnon modes in the Neel phase, their critical behaviors diverge strikingly. At the J1-J2 critical point, the Higgs mode becomes gapless, yielding three gapless modes that reflect the full restoration of \(\mathrm{O}(3)\) symmetry. In the J-Q3 model, we instead observe four gapless transverse modes at either side of the transition. This spectral feature, together with the entanglement entropy results, provides direct evidence for the weakly first-order scenario that the deconfined quantum critical point exhibits an emergent \(\mathrm{SO}(5)\) symmetry that spontaneously breaks to \(\mathrm{O}(4)\).',
+    abstract: '',
     // citation: '',
     isNew: false,
     isPreprint: true,

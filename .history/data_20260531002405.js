@@ -126,7 +126,7 @@ const publications = [
     links: [
       { text: "Preprint", url: "paper/2603.19951v1.pdf" }
     ],
-    abstract: 'Quantum Fisher information (QFI) is a measure of multipartite quantum entanglement that can be obtained from inelastic neutron scattering data on quantum magnets. In this work, we demonstrate that the QFI can distinguish an unconventional quantum critical point (QCP) with fractionalization and emergent gauge structure from conventional ones within the Landau paradigm. We compute the QFI, via large-scale quantum Monte Carlo (QMC) simulations and exact diagonalization, in a kagome lattice quantum spin liquid (QSL) model with an XY and a cluster-Ising interactions. When the XY interaction is ferromagnetic, the QFI obtained by QMC reveals a large anomalous dimension, which is a fingerprint of the \((2+1)\mathrm{D}\ \mathrm{XY}^{*}\) universality class for the transition from the ferromagnetic phase to the \(\mathbb{Z}_2\) QSL. The investigation of thermal and dynamical properties of QFI is further extended to the case of antiferromagnetic XY interaction via exact diagonalization. In this regime, a transition to a possibly distinct QSL phase is suggested via both entanglement-based probes, such as QFI and genuine multipartite negativity, and analyses of the energy spectrum and structure factors. These results not only demonstrate the versatility of QFI in identifying QSL states and unconventional QCPs but also provide useful guidance for future theoretical and experimental studies of frustrated magnets.',
+    abstract: '',
     // citation: '',
     isNew: true,
     isPreprint: true,
@@ -139,7 +139,7 @@ const publications = [
     links: [
       { text: "Preprint", url: "paper/2510.14813v1.pdf" }
     ],
-    abstract: 'Quantum Fisher information (QFI) is a measure of multipartite entanglement accessible via inelastic neutron scattering. Here we demonstrate that QFI reveals thermal and dynamical properties of quantum spin ice (QSI), a three-dimensional quantum spin liquid with fractionalized excitations. By developing a multi-directed loop update quantum Monte Carlo algorithm, along with exact diagonalization and gauge mean-field theory, we compute the QFI for the pyrochlore lattice. The temperature and momentum dependence of QFI maps the phase diagram, distinguishing the ferromagnetic ordered phase, its critical region, the zero-flux QSI, and the \(\pi\)-flux QSI. QFI also captures two crossover scales: from trivial paramagnet to classical spin ice, then to QSI. We discuss the \(\pi\)-flux QSI in light of experiments on cerium-based pyrochlores. Our results suggest that QFI not only detects entanglement but also serves as a sensitive thermal and dynamical probe for frustrated quantum magnets.',
+    abstract: '',
     // citation: 'Accepted by Nature Communications.',
     isNew: true,
     isPreprint: true,
@@ -152,7 +152,7 @@ const publications = [
     links: [
       { text: "Preprint", url: "paper/2512.11329v1.pdf" }
     ],
-    abstract: 'Recent numerical and theoretical studies on the two-dimensional J-Q3 model suggest that the deconfined quantum critical point is actually a \(\mathrm{SO}(5)\)-symmetry-enhanced first-order phase transition that is spontaneously broken to \(\mathrm{O}(4)\). However, this conclusion has mainly relied on finite-size scaling of the entanglement entropy, lacking direct evidence from physical observables. Here, we investigate the dynamical spectra of spin and bond operators at the deconfined critical point of the J-Q3 model using large-scale quantum Monte Carlo simulations, and contrast them with the well-established \(\mathrm{O}(3)\) Wilson-Fisher criticality in the J1-J2 Heisenberg model. Although both models exhibit two gapless magnon modes in the Neel phase, their critical behaviors diverge strikingly. At the J1-J2 critical point, the Higgs mode becomes gapless, yielding three gapless modes that reflect the full restoration of \(\mathrm{O}(3)\) symmetry. In the J-Q3 model, we instead observe four gapless transverse modes at either side of the transition. This spectral feature, together with the entanglement entropy results, provides direct evidence for the weakly first-order scenario that the deconfined quantum critical point exhibits an emergent \(\mathrm{SO}(5)\) symmetry that spontaneously breaks to \(\mathrm{O}(4)\).',
+    abstract: '',
     // citation: '',
     isNew: false,
     isPreprint: true,
