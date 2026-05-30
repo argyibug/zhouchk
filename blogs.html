@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Blogs - Your Name</title>
+  <meta name="author" content="Your Name">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Writing by Your Name.">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Blogs - Your Name">
+  <meta property="og:description" content="Writing by Your Name.">
+  <meta property="og:image" content="https://yourwebsite.com/figures/me.jpg">
+  <meta property="og:url" content="https://yourwebsite.com/blogs.html">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Blogs - Your Name">
+  <meta name="twitter:description" content="Writing by Your Name.">
+  <meta name="twitter:image" content="https://yourwebsite.com/figures/me.jpg">
+
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="shared-styles.css">
+  <link rel="stylesheet" type="text/css" href="blog-styles.css">
+  <link rel="icon" type="image/png" href="figures/logo.png">
+  <style>
+    .loading {
+      text-align: left;
+      padding: 20px 0;
+      color: #6b7280;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="site-nav"></div>
+
+  <main id="main-content" class="main-content-wrapper page-shell">
+    <!-- Page Title -->
+    <div>
+      <h1 class="page-title">Blogs</h1>
+    </div>
+
+    <!-- Blog Posts -->
+    <div style="margin-bottom:40px;">
+      <ul id="blog-posts-container">
+        <li class="loading">Loading blog posts...</li>
+      </ul>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <!-- Load JavaScript files -->
+  <script src="site-shell.js"></script>
+  <script src="utils.js"></script>
+  <script src="vendor/marked.umd.js"></script>
+  <script src="blog-data.js"></script>
+  <script src="blog-manager.js"></script>
+  <script>
+    // Initialize blog when page loads
+    document.addEventListener('DOMContentLoaded', async function() {
+      try {
+        await blogManager.loadPosts();
+        blogManager.renderBlogList();
+      } catch (error) {
+        console.error('Error loading blog posts:', error);
+        document.getElementById('blog-posts-container').innerHTML = `
+          <li class="coming-soon">
+            <h2>Coming Soon!</h2>
+            <p>Blog posts will appear here once you add them in <code>blog-data.js</code>.</p>
+          </li>
+        `;
+      }
+
+      // Initialize dark mode toggle (uses utils.js with sun/moon icons)
+      initializeDarkMode();
+
+      // Initialize back to top button
+      initializeBackToTop();
+    });
+
+    // Dark mode functions are loaded from utils.js
+  </script>
+</body>
+
+</html>

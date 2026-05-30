@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Projects - Your Name</title>
+  <meta name="author" content="Your Name">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projects by Your Name.">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Projects - Your Name">
+  <meta property="og:description" content="Projects by Your Name.">
+  <meta property="og:image" content="https://yourwebsite.com/figures/me.jpg">
+  <meta property="og:url" content="https://yourwebsite.com/projects.html">
+  <meta property="og:type" content="profile">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Projects - Your Name">
+  <meta name="twitter:description" content="Projects by Your Name.">
+  <meta name="twitter:image" content="https://yourwebsite.com/figures/me.jpg">
+
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="shared-styles.css">
+  <link rel="icon" type="image/png" href="figures/logo.png">
+  <style>
+    .page-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 24px;
+      text-align: left;
+    }
+
+    .project-item {
+      margin-bottom: 16px;
+      padding: 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .project-demo-image {
+      width: 120px;
+      height: 80px;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 1px solid #e5e7eb;
+    }
+
+    .project-content {
+      flex: 1;
+    }
+
+    .project-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: #1a1a1a;
+    }
+
+    .project-title a {
+      font-size: 16px;
+    }
+
+    .project-description {
+      margin-bottom: 0;
+      line-height: 1.6;
+      color: #374151;
+    }
+
+    #projects-list {
+      list-style: none !important;
+      padding-left: 0 !important;
+    }
+
+    [data-theme="dark"] .page-title { color: var(--text-color); }
+    [data-theme="dark"] .project-title { color: var(--text-color); }
+    [data-theme="dark"] .project-description { color: var(--text-color); }
+    [data-theme="dark"] .project-demo-image { border-color: #374151; }
+
+    @media screen and (max-width: 768px) {
+      .project-item {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .project-demo-image {
+        width: 100%;
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="site-nav"></div>
+
+  <main id="main-content" class="main-content-wrapper page-shell">
+    <h1 class="page-title">Projects</h1>
+
+    <div style="margin-bottom:24px;">
+      <ul id="projects-list">
+        <!-- Projects will be inserted here -->
+      </ul>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <!-- Load JavaScript files -->
+  <script src="site-shell.js"></script>
+  <script src="utils.js"></script>
+  <!-- Load data first, then populate projects -->
+  <script src="data.js"></script>
+  <script>
+    // Projects page specific script
+    document.addEventListener('DOMContentLoaded', function() {
+      // Populate all projects (both selected and non-selected)
+      populateProjects(getAllProjects(), 'projects-list');
+
+      // Initialize dark mode toggle (uses utils.js with sun/moon icons)
+      initializeDarkMode();
+
+      // Initialize back to top button
+      initializeBackToTop();
+    });
+
+    /**
+     * Function to populate projects in the specified container element
+     * @param {Array} projects - Array of project objects
+     * @param {string} containerId - ID of the container element to populate
+     */
+    function populateProjects(projects, containerId) {
+      const container = document.getElementById(containerId);
+      if (!container) return;
+
+      projects.forEach(project => {
+        const li = document.createElement('li');
+        li.className = 'project-item';
+
+        // Project demo image
+        if (project.demoPath) {
+          const imgDiv = document.createElement('div');
+          const img = document.createElement('img');
+          img.src = project.demoPath;
+          img.alt = `${project.title} demo`;
+          img.className = 'project-demo-image';
+          img.loading = 'lazy';
+
+          // Check if project has a homepage link to make image clickable
+          const homepageMatch = project.description.match(/<a href="([^"]+)">Project Homepage<\/a>/);
+          if (homepageMatch) {
+            const homepageUrl = homepageMatch[1];
+            const imgLink = document.createElement('a');
+            imgLink.href = homepageUrl;
+            imgLink.target = '_blank';
+            imgLink.rel = 'noopener';
+            imgLink.style.textDecoration = 'none';
+            imgLink.appendChild(img);
+            imgDiv.appendChild(imgLink);
+          } else {
+            imgDiv.appendChild(img);
+          }
+
+          li.appendChild(imgDiv);
+        }
+
+        // Project content container
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'project-content';
+
+        // Project title with homepage link
+        const titleDiv = document.createElement('div');
+        titleDiv.className = 'project-title';
+
+        // Check if project has a homepage link in the description
+        const homepageMatch = project.description.match(/<a href="([^"]+)">Project Homepage<\/a>/);
+        if (homepageMatch) {
+          const homepageUrl = homepageMatch[1];
+          const titleText = project.title;
+          titleDiv.innerHTML = `<strong><a href="${homepageUrl}" target="_blank" rel="noopener">${titleText}</a></strong>`;
+        } else {
+          titleDiv.textContent = project.title;
+        }
+
+        // Project description (remove homepage link from description since it's now in title)
+        const descDiv = document.createElement('div');
+        descDiv.className = 'project-description';
+        // Remove the homepage link from description since it's now in the title
+        const cleanDescription = project.description.replace(/<a href="[^"]+">Project Homepage<\/a>/, '');
+        // Clean up any extra spaces or punctuation that might be left
+        const finalDescription = cleanDescription.replace(/\s*\(\s*\)\s*/, '').trim();
+        descDiv.innerHTML = finalDescription;
+
+        // Append elements
+        contentDiv.appendChild(titleDiv);
+        contentDiv.appendChild(descDiv);
+        li.appendChild(contentDiv);
+        container.appendChild(li);
+      });
+    }
+
+    // Dark mode functions are loaded from utils.js
+  </script>
+</body>
+
+</html>

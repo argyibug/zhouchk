@@ -1,0 +1,318 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Your Name</title>
+  <meta name="author" content="Your Name">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Your Name - Your Title/Position. Brief description of your research interests and goals.">
+  <meta name="keywords" content="Your Name, Your Institution, Your Research Areas">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph tags for social media -->
+  <meta property="og:title" content="Your Name - Your Title">
+  <meta property="og:description" content="Your description here">
+  <meta property="og:image" content="https://yourwebsite.com/figures/me.jpg">
+  <meta property="og:url" content="https://yourwebsite.com/">
+  <meta property="og:type" content="profile">
+
+  <!-- Twitter Card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Your Name - Your Title">
+  <meta name="twitter:description" content="Your description here">
+  <meta name="twitter:image" content="https://yourwebsite.com/figures/me.jpg">
+
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="shared-styles.css">
+  <link rel="icon" type="image/png" href="figures/logo.png">
+
+  <!-- Preload critical assets -->
+  <link rel="preload" href="figures/me.jpg" as="image">
+  <link rel="preload" href="https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2" as="font"
+    type="font/woff2" crossorigin>
+
+  <!-- DNS prefetch for external domains -->
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Your Name",
+    "description": "Your description here",
+    "url": "https://yourwebsite.com/",
+    "image": "https://yourwebsite.com/figures/me.jpg",
+    "email": "your.email@institution.edu",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Your Institution",
+      "url": "https://www.yourinstitution.edu/"
+    },
+    "sameAs": [
+      "https://github.com/yourusername",
+      "https://www.linkedin.com/in/yourprofile",
+      "https://x.com/yourusername",
+      "https://scholar.google.com/citations?user=YOURID"
+    ]
+  }
+  </script>
+
+  <style>
+    /* Homepage-specific styles */
+    .profile-section {
+      display: flex;
+      align-items: flex-start;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    .profile-text {
+      flex: 1;
+    }
+
+    .profile-text .name {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 2px;
+    }
+
+    .profile-text .pronunciation {
+      font-size: 13px;
+      color: #9ca3af;
+      margin-bottom: 16px;
+    }
+
+    .profile-text .bio {
+      font-size: 16px;
+      color: #374151;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .profile-text .bio a {
+      font-size: inherit;
+    }
+
+    .profile-links a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    .profile-links a:hover {
+      color: var(--secondary-color);
+    }
+
+    .profile-photo {
+      flex-shrink: 0;
+      width: 160px;
+      height: 160px;
+      margin-top: 8px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .homepage-section {
+      margin-bottom: 28px;
+    }
+
+    .homepage-section h2 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #1a1a1a;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 12px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .news-list {
+      list-style: none !important;
+      padding-left: 0 !important;
+      margin: 0 !important;
+    }
+
+    .news-list li {
+      display: flex;
+      color: #374151;
+      line-height: 1.6;
+      margin-bottom: 4px !important;
+    }
+
+    .news-date {
+      font-weight: 600;
+      color: #1a1a1a;
+      width: 120px;
+      flex-shrink: 0;
+    }
+
+    [data-theme="dark"] .news-list li {
+      color: var(--text-color);
+    }
+
+    [data-theme="dark"] .news-date {
+      color: var(--text-color);
+    }
+
+
+    .homepage-section #projects-list li {
+      margin-bottom: 8px !important;
+    }
+
+    .homepage-section .publication-list {
+      list-style: none !important;
+      padding-left: 0 !important;
+    }
+
+    .homepage-section .publication-list li {
+      margin-bottom: 6px !important;
+      padding-bottom: 0 !important;
+    }
+
+
+    .view-all {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 13px;
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    .view-all:hover {
+      color: var(--secondary-color);
+    }
+
+    /* Dark mode overrides */
+    [data-theme="dark"] .profile-text .name {
+      color: var(--text-color);
+    }
+
+    [data-theme="dark"] .profile-text .pronunciation {
+      color: #888;
+    }
+
+    [data-theme="dark"] .profile-text .bio {
+      color: var(--text-color);
+    }
+
+    [data-theme="dark"] .profile-photo {
+      border-color: #374151;
+    }
+
+    [data-theme="dark"] .homepage-section h2 {
+      color: var(--text-color);
+      border-bottom-color: #374151;
+    }
+
+    [data-theme="dark"] .homepage-section .papertitle {
+      color: var(--text-color);
+    }
+
+    [data-theme="dark"] .homepage-section .paper_rest {
+      color: #b8b8b8;
+    }
+
+    [data-theme="dark"] .homepage-section .paper-venue {
+      color: #888;
+    }
+
+    /* Mobile */
+    @media screen and (max-width: 768px) {
+      .profile-section {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .profile-text .name {
+        text-align: center;
+      }
+
+      .profile-text .pronunciation {
+        text-align: center;
+      }
+
+      .profile-links {
+        text-align: center;
+      }
+
+      .profile-photo {
+        margin-top: 0;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div id="site-nav"></div>
+
+  <main id="main-content" class="homepage page-shell">
+    <!-- Profile -->
+    <div class="profile-section">
+      <div class="profile-text">
+        <div class="name">Your Name</div>
+        <div class="pronunciation">(Optional pronunciation guide)</div>
+        <p class="bio">
+          Hi! I am a [Your Position] at <a href="https://yourinstitution.edu/">Your Institution</a>, supervised by Prof.
+          <a href="https://advisor-website.com/">Advisor Name</a>. Previously, I received my [degree] from
+          <a href="https://previous-institution.edu/">Previous Institution</a> under the supervision of Prof.
+          <a href="https://previous-advisor.com/">Previous Advisor</a>.
+          Brief description of your research interests and the questions you care about.
+        </p>
+        <p class="bio">
+          Feel free to reach out to me if you'd like to discuss research or explore potential collaboration!
+        </p>
+        <div class="profile-links">
+          <a href="mailto:your.email@institution.edu">Email</a> /
+          <a href="https://github.com/yourusername">Github</a> /
+          <a href="https://www.linkedin.com/in/yourprofile">LinkedIn</a> /
+          <a href="https://x.com/yourusername">Twitter</a> /
+          <a href="files/CV.pdf">CV</a> /
+          <a href="https://scholar.google.com/citations?user=YOURID">Google Scholar</a>
+        </div>
+      </div>
+      <img class="profile-photo" alt="Your Name" src="figures/me.jpg" loading="eager" width="160" height="160">
+    </div>
+
+    <!-- News -->
+    <div class="homepage-section">
+      <h2>News</h2>
+      <ul class="news-list">
+        <li><span class="news-date">Month YYYY</span><span>A short news item describing a recent update, talk, or
+              milestone.</span></li>
+      </ul>
+    </div>
+
+    <!-- Selected Papers -->
+    <div class="homepage-section">
+      <h2>Selected Papers</h2>
+      <ul id="selected-papers-list" class="publication-list">
+        <!-- Populated by main.js -->
+      </ul>
+      <a href="publications.html" class="view-all">View all publications &rarr;</a>
+    </div>
+
+    <!-- Selected Projects -->
+    <div class="homepage-section">
+      <h2>Selected Projects</h2>
+      <ul id="projects-list">
+        <!-- Populated by main.js -->
+      </ul>
+      <a href="projects.html" class="view-all">View all projects &rarr;</a>
+    </div>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="site-shell.js"></script>
+  <script src="utils.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>

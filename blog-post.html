@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Blog Post - Your Name</title>
+  <meta name="author" content="Your Name">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Blog post by Your Name.">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Blog Post - Your Name">
+  <meta property="og:description" content="Blog post by Your Name.">
+  <meta property="og:image" content="https://yourwebsite.com/figures/me.jpg">
+  <meta property="og:type" content="article">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Blog Post - Your Name">
+  <meta name="twitter:description" content="Blog post by Your Name.">
+  <meta name="twitter:image" content="https://yourwebsite.com/figures/me.jpg">
+
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="shared-styles.css">
+  <link rel="stylesheet" type="text/css" href="blog-styles.css">
+  <link rel="icon" type="image/png" href="figures/logo.png">
+
+  <style>
+    .loading, .error {
+      text-align: left;
+      padding: 20px 0;
+      color: #6b7280;
+    }
+
+    .error h2 {
+      color: #1a1a1a;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    [data-theme="dark"] .error h2 { color: var(--text-color); }
+
+    .post-content pre code {
+      background: none;
+      padding: 0;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="site-nav"></div>
+
+  <main id="main-content" class="main-content-wrapper page-shell">
+    <div class="post-container">
+      <div id="post-content">
+        <div class="loading">Loading blog post...</div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <!-- Load JavaScript files -->
+  <script src="site-shell.js"></script>
+  <script src="utils.js"></script>
+  <script src="vendor/marked.umd.js"></script>
+  <script src="blog-data.js"></script>
+  <script src="blog-manager.js"></script>
+  <script>
+    // Initialize blog post page when it loads
+    document.addEventListener('DOMContentLoaded', async function() {
+      try {
+        // Get post ID from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const postId = urlParams.get('id');
+
+        if (!postId) {
+          showError('No blog post specified', 'Please select a blog post from the <a href="blogs.html">blogs page</a>.');
+          return;
+        }
+
+        // Load blog posts and find the requested post
+        await blogManager.loadPosts();
+        const post = blogManager.posts.find(p => p.id === postId);
+
+        if (!post) {
+          showError('Blog post not found', `The blog post "${postId}" could not be found. <a href="blogs.html">Return to blogs</a>.`);
+          return;
+        }
+
+        // Render the post
+        renderBlogPost(post);
+
+        // Update page title
+        document.title = `${post.title} - Your Name`;
+
+        // Update meta description
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+          metaDesc.content = post.excerpt;
+        }
+
+      } catch (error) {
+        console.error('Error loading blog post:', error);
+        showError('Error loading blog post', 'There was an error loading the blog post. <a href="blogs.html">Return to blogs</a>.');
+      }
+
+      // Initialize dark mode toggle (uses utils.js with sun/moon icons)
+      initializeDarkMode();
+
+      // Initialize back to top button
+      initializeBackToTop();
+    });
+
+    /**
+     * Render a blog post
+     */
+    function renderBlogPost(post) {
+      const formattedDate = blogManager.formatDate(post.date);
+      const tags = Array.isArray(post.tags) ?
+        post.tags.map(tag => `<span class="tag">${tag}</span>`).join('') : '';
+
+      const postHtml = `
+        <a href="blogs.html" class="back-link">← Back to Blogs</a>
+        <header class="post-header">
+          <h1 class="post-title">${post.title}</h1>
+          <div class="post-meta">
+            <span>${formattedDate}</span>
+            <span>by ${post.author}</span>
+            <span>${post.readTime} min read</span>
+          </div>
+          ${tags ? `<div class="post-tags">${tags}</div>` : ''}
+        </header>
+        <div class="post-content">
+          ${post.htmlContent || '<p>Content not available.</p>'}
+        </div>
+      `;
+
+      document.getElementById('post-content').innerHTML = postHtml;
+    }
+
+    /**
+     * Show error message
+     */
+    function showError(title, message) {
+      const errorHtml = `
+        <div class="error">
+          <h2>${title}</h2>
+          <p>${message}</p>
+        </div>
+      `;
+      document.getElementById('post-content').innerHTML = errorHtml;
+    }
+
+    // Dark mode functions are loaded from utils.js
+  </script>
+</body>
+
+</html>
