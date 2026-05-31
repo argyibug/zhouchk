@@ -285,15 +285,11 @@ function populateTalks() {
 
   talks.forEach(talk => {
     const li = document.createElement('li');
-    const attachmentLinks = (talk.attachments || []).map(attachment => {
-      const attachmentText = talk.isposter && attachment.text === 'Slide'
-        ? 'Poster'
-        : attachment.text;
-      return `<a href="${attachment.url}" target="_blank">${attachmentText}</a>`;
-    }
+    const attachmentLinks = (talk.attachments || []).map(attachment =>
+      `<a href="${attachment.url}" target="_blank">${attachment.text}</a>`
     ).join(' | ');
 
-    li.innerHTML = `<p><span class="activity-item-title">${talk.title}</span><br><span class="activity-item-meta">${talk.venue}, ${talk.date}</span><br>[ ${attachmentLinks} ]</p>`;
+    li.innerHTML = `<p>${talk.title}, ${talk.venue}, ${talk.date} [ ${attachmentLinks} ]</p>`;
 
     // Default to talk item when no explicit category is provided.
     if (talk.isposter && posterList) {

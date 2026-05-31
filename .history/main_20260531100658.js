@@ -293,7 +293,7 @@ function populateTalks() {
     }
     ).join(' | ');
 
-    li.innerHTML = `<p><span class="activity-item-title">${talk.title}</span><br><span class="activity-item-meta">${talk.venue}, ${talk.date}</span><br>[ ${attachmentLinks} ]</p>`;
+    li.innerHTML = `<p>${talk.title}, ${talk.venue}, ${talk.date}<br>[ ${attachmentLinks} ]</p>`;
 
     // Default to talk item when no explicit category is provided.
     if (talk.isposter && posterList) {

@@ -208,11 +208,11 @@ const talks = [
   },
 
   {
-    title: "Ground state and low energy spectrum of Kagome antiferromagnet YCu3-Br/Cl ",
-    venue: "ISSP Theory Workshop: Correlated Quantum Materials + beyond, Institute for Solid State Physics, Kashiwa, Japan",
-    date: "2024.11.18",
+    title: "Quantum Fisher Information as a Thermal and Dynamical Probe in Frustrated spin system",
+    venue: "automate2026, Cergy-Pontoise, France",
+    date: "2026.05.12",
     attachments: [
-      { text: "Conference", url: "https://sites.google.com/g.ecc.u-tokyo.ac.jp/cqmb2024/home/" },
+      { text: "Conference", url: "https://automate2026.sciencesconf.org/" },
       { text: "Slide", url: "paper/talk_v00.pdf" }
     ],
     istalk: false,
