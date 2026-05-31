@@ -300,8 +300,7 @@ function populateTalks() {
     const institution = venueParts.length > 0 ? venueParts[0] : '';
     const location = venueParts.length > 1 ? venueParts.slice(1).join(', ') : '';
 
-    const metaLine = [institution, location, talk.date].filter(Boolean).join(', ');
-    li.innerHTML = `<p><span class="activity-item-title">${talk.title}</span><br><span class="activity-item-meta">${metaLine}</span><br>[ ${attachmentLinks} ]</p>`;
+    li.innerHTML = `<p><span class="activity-item-title">${talk.title}</span><br><span class="activity-item-meta">${institution}</span>${location ? `<br><span class="activity-item-meta">${location}</span>` : ''}<br><span class="activity-item-meta">${talk.date}</span><br>[ ${attachmentLinks} ]</p>`;
 
     // Default to talk item when no explicit category is provided.
     if (talk.isposter && posterList) {
