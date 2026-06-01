@@ -7,7 +7,7 @@
   const NAV_ITEMS = [
     { key: 'home', href: 'index.html', label: 'Home' },
     { key: 'publications', href: 'publications.html', label: 'Publications' },
-    { key: 'projects', href: 'projects.html', label: 'Project & Blog' },
+    { key: 'projects', href: 'projects.html', label: 'project&blog' },
     { key: 'blogs', href: 'blogs.html', label: 'Academic Activity' },
     { key: 'cv', href: 'files/ZCK_resume.pdf', label: 'CV' }
   ];
