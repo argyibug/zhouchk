@@ -172,7 +172,7 @@ ul, ol {
 }
 
 .new-badge {
-  color: var(--secondary-color);
+  color: #6b7280;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -181,7 +181,7 @@ ul, ol {
 }
 
 [data-theme="dark"] .new-badge {
-  color: var(--secondary-color);
+  color: #9ca3af;
 }
 
 .paper_rest {
@@ -196,11 +196,11 @@ ul, ol {
 }
 
 .paper-venue {
-  color: var(--placeholder-text);
+  color: #9ca3af;
 }
 
 [data-theme="dark"] .paper-venue {
-  color: var(--placeholder-text);
+  color: #888;
 }
 
 .paper-links {
@@ -301,7 +301,7 @@ ul, ol {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 24px;
-  color: var(--text-color);
+  color: #1a1a1a;
 }
 
 /* Responsive Design */
