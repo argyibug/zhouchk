@@ -198,7 +198,7 @@ const academicAppointments = [
 
 const teaching = [
   "Teaching Assistant, Physics problem-solving tutorials 2020-2023",
-  "Organization Assistant, <a href=\"https://projects.croucher.org.hk/advanced-study-institutes/fractional-chern-insulators-theory-numerics-and-experiment\" target=\"_blank\" rel=\"noopener\">Fractional Chern insulators</a> 2025.10.04-07"
+  "Organization Assistant, Fractional Chern insulators 2025.10.04-07"
 ];
 
 const academicServices = [];
