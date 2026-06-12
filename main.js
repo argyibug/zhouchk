@@ -124,7 +124,16 @@ function populatePublications(publications, listId) {
       const content = document.createElement('div');
       content.className = `${baseClass}-content detail-content`;
       const hasContent = typeof contentValue === 'string' && contentValue.trim().length > 0;
-      content.innerHTML = hasContent ? contentValue : fallbackText;
+      
+      // Create a temporary element to handle HTML escaping properly
+      if (hasContent) {
+        // Use a text node to preserve LaTeX formatting
+        const tempDiv = document.createElement('div');
+        tempDiv.textContent = contentValue;
+        content.innerHTML = tempDiv.innerHTML;
+      } else {
+        content.textContent = fallbackText;
+      }
       content.hidden = true;
       const contentId = `detail-content-${detailIdCounter++}`;
       content.id = contentId;
@@ -141,6 +150,14 @@ function populatePublications(publications, listId) {
         toggle.setAttribute('aria-expanded', String(nextState));
         content.hidden = !nextState;
         toggle.textContent = nextState ? `Hide ${label}` : label;
+        
+        // Typeset math when expanding details with formulas
+        if (nextState && window.MathJax && typeof window.MathJax.typesetPromise === 'function') {
+          // Use requestAnimationFrame to ensure the element is rendered before typesetting
+          requestAnimationFrame(() => {
+            window.MathJax.typesetPromise([content]).catch(() => {});
+          });
+        }
       });
 
       container.appendChild(content);
