@@ -124,7 +124,13 @@ function populatePublications(publications, listId) {
       const content = document.createElement('div');
       content.className = `${baseClass}-content detail-content`;
       const hasContent = typeof contentValue === 'string' && contentValue.trim().length > 0;
-        content.innerHTML = hasContent ? contentValue : fallbackText;
+      if (hasContent) {
+        const tempDiv = document.createElement('div');
+        tempDiv.textContent = contentValue;
+        content.innerHTML = tempDiv.innerHTML;
+      } else {
+        content.textContent = fallbackText;
+      }
       content.hidden = true;
       const contentId = `detail-content-${detailIdCounter++}`;
       content.id = contentId;
