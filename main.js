@@ -124,7 +124,9 @@ function populatePublications(publications, listId) {
       const content = document.createElement('div');
       content.className = `${baseClass}-content detail-content`;
       const hasContent = typeof contentValue === 'string' && contentValue.trim().length > 0;
-        content.innerHTML = hasContent ? contentValue : fallbackText;
+        // Escape backslashes in LaTeX formulas before setting innerHTML
+        const escapedContent = hasContent ? contentValue.replace(/\\/g, '\\\\') : fallbackText;
+        content.innerHTML = escapedContent;
       content.hidden = true;
       const contentId = `detail-content-${detailIdCounter++}`;
       content.id = contentId;
