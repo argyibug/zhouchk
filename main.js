@@ -124,16 +124,7 @@ function populatePublications(publications, listId) {
       const content = document.createElement('div');
       content.className = `${baseClass}-content detail-content`;
       const hasContent = typeof contentValue === 'string' && contentValue.trim().length > 0;
-      
-      // Create a temporary element to handle HTML escaping properly
-      if (hasContent) {
-        // Use a text node to preserve LaTeX formatting
-        const tempDiv = document.createElement('div');
-        tempDiv.textContent = contentValue;
-        content.innerHTML = tempDiv.innerHTML;
-      } else {
-        content.textContent = fallbackText;
-      }
+        content.innerHTML = hasContent ? contentValue : fallbackText;
       content.hidden = true;
       const contentId = `detail-content-${detailIdCounter++}`;
       content.id = contentId;
