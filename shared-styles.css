@@ -37,8 +37,8 @@
   max-width: 820px;
   border: 1px solid var(--border-color);
   border-radius: 999px;
-  background: rgba(255, 253, 249, 0.82);
-  box-shadow: 0 14px 32px rgba(122, 66, 11, 0.10);
+  background: var(--surface-bg);
+  box-shadow: 0 14px 32px var(--shadow-color);
   backdrop-filter: blur(10px);
 }
 
