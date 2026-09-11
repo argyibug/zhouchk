@@ -1,6 +1,32 @@
 // Unified publications data for homepage, publications page, and CV.
 const publications = [
   {
+    title: "Quantum Fisher Information as a Thermal Probe in Frustrated Magnets through Insights from Quantum Spin Ice",
+    authors: "<b>Chengkang Zhou</b>, Zhengbang Zhou, Felix Desrochers, Yong Baek Kim, Zi Yang Meng",
+    venue: '<a href="https://doi.org/10.1038/s41467-026-74589-6" target="_blank" rel="noopener">Nat Commun 17, 7975 (2026)</a>',
+    links: [
+      { text: "Paper", url: "paper/Nat Commun 17, 7975 (2026).pdf" }
+    ],
+    abstract: 'We investigate the ground-state and finite-temperature properties of the kagome antiferromagnetic Heisenberg model with three inequivalent couplings, dubbed the $3J$ model, which is designed for the candidate Dirac quantum spin liquid (QSL) material YCu$_3$(OH)$_6$Br$_2$[Br$_{1-x}$(OH)$_x$] (see, e.g., Zeng et al., 2024). Employing large-scale density-matrix renormalization group (DMRG) supplemented by neural quantum states (NQS) simulations, we identify an intermediate QSL phase between two magnetically ordered phases.We also find that this QSL is separated from the kagome spin liquid ground state at the isotropic limit. To establish a direct comparison with experiments, we compute the specific heat of the model by means of advanced exponential (XTRG) and tangent-space (tanTRG) thermal tensor-network methods. In the magnetically ordered phase, the specific heat over temperature exhibits a shoulder at a temperature that is a fraction of the coupling strength $J_{hex}$, which disappears in the QSL phase. These universal behaviors are consistent with the experimentally observed specific heat in $3J$ materials for both ordered and QSL candidate samples. Our work thus connects microscopic models with experimentally measurable signatures, exemplifying an integrated approach (see Meng et al., 2026) to understanding QSL phenomena in frustrated quantum magnets, with $3J$ materials serving as a representative case and providing a foundation for future studies.',
+    // citation: 'Accepted by Nature Communications.',
+    isNew: true,
+    isPreprint: true,
+    isSelected: true
+  },
+  {
+    title: "Quantum Fisher Information as a Thermal Probe in Frustrated Magnets through Insights from Quantum Spin Ice",
+    authors: "<b>Chengkang Zhou</b>, Zhengbang Zhou, Felix Desrochers, Yong Baek Kim, Zi Yang Meng",
+    venue: '<a href="https://doi.org/10.1038/s41467-026-74589-6" target="_blank" rel="noopener">Nat Commun 17, 7975 (2026)</a>',
+    links: [
+      { text: "Paper", url: "paper/Nat Commun 17, 7975 (2026).pdf" }
+    ],
+    abstract: 'Quantum Fisher information (QFI) is a measure of multipartite entanglement accessible via inelastic neutron scattering. Here we demonstrate that QFI reveals thermal and dynamical properties of quantum spin ice (QSI), a three-dimensional quantum spin liquid with fractionalized excitations. By developing a multi-directed loop update quantum Monte Carlo algorithm, along with exact diagonalization and gauge mean-field theory, we compute the QFI for the pyrochlore lattice. The temperature and momentum dependence of QFI maps the phase diagram, distinguishing the ferromagnetic ordered phase, its critical region, the zero-flux QSI, and the \\(\\pi\\)-flux QSI. QFI also captures two crossover scales: from trivial paramagnet to classical spin ice, then to QSI. We discuss the \\(\\pi\\)-flux QSI in light of experiments on cerium-based pyrochlores. Our results suggest that QFI not only detects entanglement but also serves as a sensitive thermal and dynamical probe for frustrated quantum magnets.',
+    // citation: 'Accepted by Nature Communications.',
+    isNew: true,
+    isPreprint: false,
+    isSelected: true
+  },
+  {
     title: "Spin excitations arising from anisotropic Dirac spinons in \\\(\\mathrm{YCu}_3(\\mathrm{OD})_6\\mathrm{Br}_2[\\mathrm{Br}_{0.33}(\\mathrm{OD})_{0.67}]\\\)",
     authors: "Lankun Han, Zhenyuan Zeng, Min Long, Menghan Song, <b>Chengkang Zhou</b>, Bo Liu, Maiko Kofu, Kenji Nakajima, Paul Steffens, Arno Hiess, Zi Yang Meng, Yixi Su, Shiliang Li",
     venue: '<a href="https://doi.org/10.1103/PhysRevB.112.045114" target="_blank" rel="noopener">Phys. Rev. B 112, 045114 (2025)</a>',
@@ -128,19 +154,6 @@ const publications = [
     ],
     abstract: 'Quantum Fisher information (QFI) is a measure of multipartite quantum entanglement that can be obtained from inelastic neutron scattering data on quantum magnets. In this work, we demonstrate that the QFI can distinguish an unconventional quantum critical point (QCP) with fractionalization and emergent gauge structure from conventional ones within the Landau paradigm. We compute the QFI, via large-scale quantum Monte Carlo (QMC) simulations and exact diagonalization, in a kagome lattice quantum spin liquid (QSL) model with an XY and a cluster-Ising interactions. When the XY interaction is ferromagnetic, the QFI obtained by QMC reveals a large anomalous dimension, which is a fingerprint of the \\((2+1)\\mathrm{D}\\ \\mathrm{XY}^{*}\\) universality class for the transition from the ferromagnetic phase to the \\(\\mathbb{Z}_2\\) QSL. The investigation of thermal and dynamical properties of QFI is further extended to the case of antiferromagnetic XY interaction via exact diagonalization. In this regime, a transition to a possibly distinct QSL phase is suggested via both entanglement-based probes, such as QFI and genuine multipartite negativity, and analyses of the energy spectrum and structure factors. These results not only demonstrate the versatility of QFI in identifying QSL states and unconventional QCPs but also provide useful guidance for future theoretical and experimental studies of frustrated magnets.',
     // citation: '',
-    isNew: true,
-    isPreprint: true,
-    isSelected: true
-  },
-  {
-    title: "Quantum Fisher Information as a Thermal Probe in Frustrated Magnets through Insights from Quantum Spin Ice",
-    authors: "<b>Chengkang Zhou</b>, Zhengbang Zhou, Felix Desrochers, Yong Baek Kim, Zi Yang Meng",
-    venue: '<a href="https://arxiv.org/abs/2510.14813" target="_blank" rel="noopener">arXiv:2510.14813 (2025)</a>',
-    links: [
-      { text: "Paper", url: "paper/Nat Commun 17, 7975 (2026).pdf" }
-    ],
-    abstract: 'Quantum Fisher information (QFI) is a measure of multipartite entanglement accessible via inelastic neutron scattering. Here we demonstrate that QFI reveals thermal and dynamical properties of quantum spin ice (QSI), a three-dimensional quantum spin liquid with fractionalized excitations. By developing a multi-directed loop update quantum Monte Carlo algorithm, along with exact diagonalization and gauge mean-field theory, we compute the QFI for the pyrochlore lattice. The temperature and momentum dependence of QFI maps the phase diagram, distinguishing the ferromagnetic ordered phase, its critical region, the zero-flux QSI, and the \\(\\pi\\)-flux QSI. QFI also captures two crossover scales: from trivial paramagnet to classical spin ice, then to QSI. We discuss the \\(\\pi\\)-flux QSI in light of experiments on cerium-based pyrochlores. Our results suggest that QFI not only detects entanglement but also serves as a sensitive thermal and dynamical probe for frustrated quantum magnets.',
-    // citation: 'Accepted by Nature Communications.',
     isNew: true,
     isPreprint: true,
     isSelected: true

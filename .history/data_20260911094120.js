@@ -1,6 +1,19 @@
 // Unified publications data for homepage, publications page, and CV.
 const publications = [
   {
+    title: "Unraveling the Kagome Antiferromagnetic $3J$ Model and Its Materials: An Integrated Approach",
+    authors: "Xin Lu, Andreas Raikos, Menghan Song, Zezong Li, Lankun Han, Shiliang Li, Sylvain Capponi, Zi Yang Meng, <b>Chengkang Zhou</b>",
+    venue: '<a href="https://doi.org/10.1038/s41467-026-74589-6" target="_blank" rel="noopener">Nat Commun 17, 7975 (2026)</a>',
+    links: [
+      { text: "Paper", url: "paper/Nat Commun 17, 7975 (2026).pdf" }
+    ],
+    abstract: 'We investigate the ground-state and finite-temperature properties of the kagome antiferromagnetic Heisenberg model with three inequivalent couplings, dubbed the $3J$ model, which is designed for the candidate Dirac quantum spin liquid (QSL) material YCu$_3$(OH)$_6$Br$_2$[Br$_{1-x}$(OH)$_x$] (see, e.g., Zeng et al., 2024). Employing large-scale density-matrix renormalization group (DMRG) supplemented by neural quantum states (NQS) simulations, we identify an intermediate QSL phase between two magnetically ordered phases.We also find that this QSL is separated from the kagome spin liquid ground state at the isotropic limit. To establish a direct comparison with experiments, we compute the specific heat of the model by means of advanced exponential (XTRG) and tangent-space (tanTRG) thermal tensor-network methods. In the magnetically ordered phase, the specific heat over temperature exhibits a shoulder at a temperature that is a fraction of the coupling strength $J_{hex}$, which disappears in the QSL phase. These universal behaviors are consistent with the experimentally observed specific heat in $3J$ materials for both ordered and QSL candidate samples. Our work thus connects microscopic models with experimentally measurable signatures, exemplifying an integrated approach (see Meng et al., 2026) to understanding QSL phenomena in frustrated quantum magnets, with $3J$ materials serving as a representative case and providing a foundation for future studies.',
+    // citation: 'Accepted by Nature Communications.',
+    isNew: true,
+    isPreprint: true,
+    isSelected: true
+  },
+  {
     title: "Quantum Fisher Information as a Thermal Probe in Frustrated Magnets through Insights from Quantum Spin Ice",
     authors: "<b>Chengkang Zhou</b>, Zhengbang Zhou, Felix Desrochers, Yong Baek Kim, Zi Yang Meng",
     venue: '<a href="https://doi.org/10.1038/s41467-026-74589-6" target="_blank" rel="noopener">Nat Commun 17, 7975 (2026)</a>',
